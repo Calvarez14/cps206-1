@@ -12,11 +12,11 @@ package edu.jalc.inclass.cocacola.recipe.store;
  */
 public class SecretRecipeStore {
 
-  private static SecretRecipeStore secretRecipeStore;
-  private static HashMap<PinNumber,Recipe> secretStore;
+  private static SecretRecipeStore secretRecipeStore = null;
+  private static HashMap<PinNumber, Recipe> secretStore;
 
   private SecretRecipeStore(){
-    secretStore
+    this.secretStore = new HashMap<>();
   }
 
   public static SecretRecipeStore getInstance(){
@@ -24,12 +24,12 @@ public class SecretRecipeStore {
     return secretRecipeStore;
   }
 
-  public void getRecipe(SecretRecipeStore secretRecipeStore){
-    if(HashMap == null) HashMap = new HashMap();
-
+  public SecretRecipeStore addRecipe(){
+    this.secretStore.put(employee, recipe.getPinNumber());
+    return.this;
   }
 
-  public void addRecipe(){
-
+  public Recipe getRecipe(){
+    this.secretRecipeStore = secretRecipeStore;
   }
 }
